@@ -1,0 +1,20 @@
+
+OBJS	= lab_11.o
+SOURCE	= flab_11.cpp
+OUT	= a.out
+CC	 = g++
+FLAGS	 = -g -c -Wall
+
+all: $(OBJS)
+	$(CC) -g $(OBJS) -o $(OUT) $(LFLAGS)
+
+final_lab.o: final_lab.cpp
+	$(CC) $(FLAGS) final_lab.cpp 
+
+
+clean:
+	rm -f $(OBJS) $(OUT)
+
+# run the program
+run: $(OUT)
+	./$(OUT)
